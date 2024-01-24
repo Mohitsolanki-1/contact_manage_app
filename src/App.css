@@ -1,0 +1,122 @@
+/* App.css */
+
+/* Header */
+.header {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* ContactList Component */
+.contact_list {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+.ContactList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Individual Contact Item */
+.ContactList > div {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ContactList > div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(52, 152, 219, 0.8);
+}
+
+/* Lighting effect */
+.ContactList > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.2)
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.ContactList > div:hover::before {
+  opacity: 1;
+}
+
+/* AddContact Component */
+.formHeader {
+  text-align: center;
+  margin: 20px;
+}
+
+.add-contact {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #3498db;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name_1,
+.email_1 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  padding: 12px;
+  margin: 8px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  background-color: #ecf0f1;
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+input:hover,
+input:focus {
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.btn {
+  padding: 14px;
+  margin-top: 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
